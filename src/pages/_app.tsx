@@ -1,3 +1,4 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import { Zen_Kaku_Gothic_New } from "next/font/google";
 
@@ -19,7 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
             ${ZenKakuGothicNew_bold.style.fontFamily};
         }
       `}</style>
-      <Component {...pageProps} />
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </>
   );
 }
