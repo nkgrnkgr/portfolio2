@@ -1,9 +1,9 @@
-import { Box, Container, Tab, TabList, Tabs } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 export const PageTab: React.FC = () => {
   return (
     <Box>
-      <Container>
+      {/* <Container>
         <Tabs>
           <TabList>
             <Tab>One</Tab>
@@ -11,7 +11,7 @@ export const PageTab: React.FC = () => {
             <Tab>Three</Tab>
           </TabList>
         </Tabs>
-      </Container>
+      </Container> */}
     </Box>
   );
 };

@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 
 export const Header: React.FC = () => {
@@ -16,9 +16,6 @@ export const Header: React.FC = () => {
         }}
       >
         <Image alt="logo" width={40} height={40} src="./logo-b.svg" />
-        <Text fontSize="medium" sx={{ fontWeight: "bold", marginLeft: 2 }}>
-          Nokogiri
-        </Text>
       </Box>
       <Box
         sx={{
@@ -26,7 +23,7 @@ export const Header: React.FC = () => {
           alignItems: "center",
         }}
       >
-        <Text fontSize="medium">Github</Text>
+        <Image alt="logo" width={40} height={40} src="./github-mark.svg" />
       </Box>
     </Flex>
   );
