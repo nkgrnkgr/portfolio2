@@ -1,5 +1,4 @@
 import {
-  Box,
   Flex,
   Link,
   Tab,
@@ -73,7 +72,7 @@ const GithubLogo: React.FC = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Image alt="logo" width={40} height={40} src="./github-mark.svg" />
+      <Image alt="logo" width={20} height={20} src="./github-mark.svg" />
     </Link>
   </Flex>
 );
