@@ -13,6 +13,7 @@ specifiers:
   next: 13.3.0
   react: 18.2.0
   react-dom: 18.2.0
+  swr: ^2.1.2
   typescript: 5.0.4
 
 dependencies:
@@ -28,6 +29,7 @@ dependencies:
   next: 13.3.0_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  swr: 2.1.2_react@18.2.0
   typescript: 5.0.4
 
 packages:
@@ -3538,6 +3540,15 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
+  /swr/2.1.2_react@18.2.0:
+    resolution: {integrity: sha512-ocfaD2rnYZKqTDplCEX2bH5Z1++n2JSej9oYi7hVfXXWYm+0RP+H6fVrogWB0mtMclv1guk9kEnAzNLygOy9Hw==}
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
+    dev: false
+
   /synckit/0.8.5:
     resolution: {integrity: sha512-L1dapNV6vu2s/4Sputv8xGsCdAVlb5nRDMFU/E27D44l5U6cw1g0dGd45uLc+OXjNMmF4ntiMdCimzcjFKQI8Q==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -3683,6 +3694,14 @@ packages:
       detect-node-es: 1.1.0
       react: 18.2.0
       tslib: 2.5.0
+    dev: false
+
+  /use-sync-external-store/1.2.0_react@18.2.0:
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /which-boxed-primitive/1.0.2:
