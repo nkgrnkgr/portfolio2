@@ -17,16 +17,10 @@ export const Languages: React.FC = () => {
   if (error) return <Box>Error</Box>;
 
   return (
-    <Box>
-      <Skeleton isLoaded={!isLoading}>
-        <Flex>
-          <ContentWrapper>
-            <LanguagesChart
-              chartDataList={convertResponseToChartDataList(data)}
-            />
-          </ContentWrapper>
-        </Flex>
-      </Skeleton>
-    </Box>
+    <Skeleton isLoaded={!isLoading}>
+      <ContentWrapper>
+        <LanguagesChart chartDataList={convertResponseToChartDataList(data)} />
+      </ContentWrapper>
+    </Skeleton>
   );
 };
