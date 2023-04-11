@@ -8,6 +8,7 @@ export const ContentWrapper: React.FC<{ children: React.ReactNode }> = ({
       border: "4px solid #000",
       borderRadius: "10px 10px",
       padding: 3,
+      height: "100%",
     }}
   >
     {children}

@@ -1,25 +1,29 @@
 import { ContentWrapper } from "@/components/shared/ContentWrapper";
-import { Container, Flex, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex } from "@chakra-ui/react";
 import { GithubGrassGraph } from "../GithubGrassGraph";
 import { Languages } from "../Languages";
 import { WelcomeMessage } from "../WelcomeMessage";
 
 export const Home: React.FC = () => {
   return (
-    <Container>
-      <VStack>
-        <Flex gap={1}>
+    <Container mt={6}>
+      <Flex gap={2} flexWrap="wrap" justifyContent="center">
+        <Box flex={1}>
           <ContentWrapper>
             <WelcomeMessage />
           </ContentWrapper>
+        </Box>
+        <Box flex={1}>
           <ContentWrapper>
             <Languages />
           </ContentWrapper>
-        </Flex>
+        </Box>
+      </Flex>
+      <Box mt={2}>
         <ContentWrapper>
           <GithubGrassGraph />
         </ContentWrapper>
-      </VStack>
+      </Box>
     </Container>
   );
 };

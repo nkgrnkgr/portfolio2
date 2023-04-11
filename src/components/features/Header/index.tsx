@@ -13,12 +13,7 @@ import Image from "next/image";
 
 export const Header: React.FC = () => {
   return (
-    <Flex
-      width="100%"
-      p="4"
-      alignContent="center"
-      justifyContent="space-between"
-    >
+    <Flex p="4" alignContent="center" justifyContent="space-between">
       <LogoAndName />
       <PageLinks />
       <GithubLogo />
