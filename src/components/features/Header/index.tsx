@@ -1,4 +1,6 @@
+import { Nokogiri } from "@/components/shared/Nokogiri";
 import {
+  Box,
   Flex,
   Link,
   Tab,
@@ -27,18 +29,16 @@ export const Header: React.FC = () => {
 const LogoAndName: React.FC = () => (
   <Flex justifyContent="flex-start" alignContent="center" flex="1">
     <Image alt="logo" width={40} height={40} src="./logo-b.svg" />
-    <Text
+    <Box
       display={{
         base: "none",
         sm: "block",
       }}
       ml={2}
       fontSize="2xl"
-      fontWeight="extrabold"
-      fontFamily="Helvetica"
     >
-      Nokogiri
-    </Text>
+      <Nokogiri />
+    </Box>
   </Flex>
 );
 

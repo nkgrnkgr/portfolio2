@@ -18,9 +18,7 @@ export const Languages: React.FC = () => {
 
   return (
     <Skeleton isLoaded={!isLoading}>
-      <ContentWrapper>
-        <LanguagesChart chartDataList={convertResponseToChartDataList(data)} />
-      </ContentWrapper>
+      <LanguagesChart chartDataList={convertResponseToChartDataList(data)} />
     </Skeleton>
   );
 };
