@@ -12,8 +12,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
       "https://uslokrb2q1.execute-api.ap-northeast-1.amazonaws.com/prod/githubrepos"
     );
     const json = await response.json();
-    console.log(json);
-
     res.status(200).json({ data: JSON.stringify(json, null, 2) });
     return;
   }
