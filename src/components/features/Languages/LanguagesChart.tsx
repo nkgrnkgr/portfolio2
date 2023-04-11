@@ -1,3 +1,4 @@
+import { GithubLanguagesResponse } from "@/types/GithubLanguages";
 import Chart from "chart.js/auto";
 import { useEffect } from "react";
 
@@ -16,7 +17,7 @@ export const LanguagesChart: React.FC<{
       type: "doughnut",
       data: createChartData(chartDataList),
     });
-  }, []);
+  }, [chartDataList]);
 
   return <canvas id={CANVAS_ID} />;
 };
@@ -26,24 +27,6 @@ export type ChartDataType = {
   backgroundColor: string;
   data: number;
 };
-
-// const CHART_DATA_LIST: ChartDataType[] = [
-//   {
-//     label: "TypeScript",
-//     backgroundColor: "#2f74c0",
-//     data: 3,
-//   },
-//   {
-//     label: "JavaScript",
-//     backgroundColor: "#F7DF1E",
-//     data: 2,
-//   },
-//   {
-//     label: "Kotlin",
-//     backgroundColor: "#7B71E4",
-//     data: 1,
-//   },
-// ];
 
 const createChartData = (list: ChartDataType[]) => {
   const labels = list.map((item) => item.label);
@@ -59,4 +42,27 @@ const createChartData = (list: ChartDataType[]) => {
       },
     ],
   };
+};
+
+const KEY_COLOR_MAP: Record<string, string> = {
+  TypeScript: "#2f74c0",
+  JavaScript: "#F7DF1E",
+  CSS: "#0091D5",
+  Java: "#E61F24",
+  Kotlin: "#7B71E4",
+};
+
+export const convertResponseToChartDataList = (
+  responseData?: GithubLanguagesResponse
+): ChartDataType[] => {
+  if (!responseData) return [];
+  return Object.entries(responseData)
+    .filter(([key]) => KEY_COLOR_MAP[key] !== undefined)
+    .map(([key, value]) => {
+      return {
+        label: key,
+        backgroundColor: KEY_COLOR_MAP[key],
+        data: value,
+      };
+    });
 };
