@@ -17,6 +17,3 @@ export const theme = extendTheme({
     },
   },
 });
-
-// #FEC600
-// #0038FE

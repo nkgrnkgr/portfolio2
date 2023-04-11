@@ -1,7 +1,6 @@
-import { ContentWrapper } from "@/components/shared/ContentWrapper";
 import { fetcher } from "@/functions/fetcher";
 import { GithubLanguagesResponse } from "@/types/GithubLanguages";
-import { Box, Flex, Skeleton } from "@chakra-ui/react";
+import { Box, Skeleton } from "@chakra-ui/react";
 import useSWR from "swr";
 import {
   LanguagesChart,
