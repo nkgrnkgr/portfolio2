@@ -19,6 +19,7 @@
     "chart.js": "^4.2.1",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "framer-motion": "^10.11.2",
     "next": "13.3.0",
     "node-fetch": "^2.6.9",

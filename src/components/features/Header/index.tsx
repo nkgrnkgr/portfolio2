@@ -2,14 +2,16 @@ import { Nokogiri } from "@/components/shared/Nokogiri";
 import {
   Box,
   Flex,
+  Icon,
   Link,
   Tab,
-  TabIndicator,
   TabList,
   Tabs,
   Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import { FaHome } from "react-icons/fa";
+import { FiPackage } from "react-icons/fi";
 
 export const Header: React.FC = () => {
   return (
@@ -21,9 +23,9 @@ export const Header: React.FC = () => {
         p="4"
         alignContent="center"
         justifyContent="space-between"
-        sx={{
-          backgroundColor: "#fff",
-        }}
+        bgColor="white"
+        borderBottom="1px solid"
+        borderBottomColor="gray.300"
       >
         <LogoAndName />
         <PageLinks />
@@ -60,19 +62,29 @@ const BoldText: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 
 const PageLinks: React.FC = () => (
   <Flex justifyContent="center" alignContent="center" flex="1">
-    <Tabs position="relative" variant="unstyled">
+    <Tabs variant="unstyled">
       <TabList>
-        <Tab>
+        <Tab
+          _selected={{
+            color: "white",
+            bg: "black",
+            borderRadius: "10px",
+          }}
+        >
+          <Icon mr={1} as={FaHome} />
           <BoldText>Home</BoldText>
         </Tab>
-        <Tab>
+        <Tab
+          _selected={{
+            color: "white",
+            bg: "black",
+            borderRadius: "10px",
+          }}
+        >
+          <Icon mr={1} as={FiPackage} />
           <BoldText>Works</BoldText>
         </Tab>
-        <Tab>
-          <BoldText>Links</BoldText>
-        </Tab>
       </TabList>
-      <TabIndicator mt="-1.5px" height="4px" bg="black" />
     </Tabs>
   </Flex>
 );
