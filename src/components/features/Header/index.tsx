@@ -1,6 +1,7 @@
 import { Nokogiri } from "@/components/shared/Nokogiri";
 import {
   Box,
+  Center,
   Flex,
   Icon,
   Link,
@@ -90,13 +91,14 @@ const PageLinks: React.FC = () => (
 );
 
 const GithubLogo: React.FC = () => (
-  <Flex justifyContent="flex-end" alignContent="center" flex="1">
+  <Center flex="1" justifyContent="flex-end">
     <Link
       href="https://github.com/nkgrnkgr/portfolio2"
       target="_blank"
       rel="noopener noreferrer"
+      textAlign="center"
     >
       <Image alt="logo" width={20} height={20} src="./github-mark.svg" />
     </Link>
-  </Flex>
+  </Center>
 );
