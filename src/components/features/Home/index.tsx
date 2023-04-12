@@ -2,15 +2,15 @@ import { ContentWrapper } from "@/components/shared/ContentWrapper";
 import { Box, Container, Flex } from "@chakra-ui/react";
 import { GithubGrassGraph } from "../GithubGrassGraph";
 import { Languages } from "../Languages";
-import { WelcomeMessage } from "../WelcomeMessage";
 import { UserTimeline } from "../Timeline";
+import { WelcomeMessage } from "../WelcomeMessage";
 
 export const Home: React.FC = () => {
   return (
     <Container mt={6}>
-      <Flex gap={2} flexWrap="wrap" justifyContent="center">
+      <Flex gap={4} flexWrap="wrap" justifyContent="center">
         <Box flex={1}>
-          <ContentWrapper>
+          <ContentWrapper bgColor="black">
             <WelcomeMessage />
           </ContentWrapper>
         </Box>
@@ -20,12 +20,12 @@ export const Home: React.FC = () => {
           </ContentWrapper>
         </Box>
       </Flex>
-      <Box mt={2}>
-        <ContentWrapper>
+      <Box mt={4}>
+        <ContentWrapper bgColor="white">
           <GithubGrassGraph />
         </ContentWrapper>
       </Box>
-      <Box mt={2}>
+      <Box mt={4}>
         <ContentWrapper>
           <UserTimeline timelineItems={data} />
         </ContentWrapper>

@@ -1,15 +1,17 @@
 import { Center } from "@chakra-ui/react";
 
-export const ContentWrapper: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => (
+export const ContentWrapper: React.FC<{
+  children: React.ReactNode;
+  bgColor?: string;
+}> = ({ children, bgColor = "#fff" }) => (
   <Center
+    bgColor={bgColor}
+    border="1px solid"
+    borderColor="gray.200"
     sx={{
-      border: "4px solid #000",
       borderRadius: "10px 10px",
       padding: 3,
       height: "100%",
-      backgroundColor: "white",
     }}
   >
     {children}

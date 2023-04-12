@@ -1,8 +1,8 @@
-import { Flex, HStack, Icon, Link, Text } from "@chakra-ui/react";
-import { Nokogiri } from "../shared/Nokogiri";
-import { ExternalLink } from "../shared/ExternalLink";
+import { Flex, HStack, Icon, Text } from "@chakra-ui/react";
 import { FaGithub, FaSpeakerDeck, FaTwitter } from "react-icons/fa";
 import { SiZenn } from "react-icons/si";
+import { ExternalLink } from "../shared/ExternalLink";
+import { Nokogiri } from "../shared/Nokogiri";
 
 export const WelcomeMessage: React.FC = () => (
   <Flex
@@ -11,6 +11,7 @@ export const WelcomeMessage: React.FC = () => (
     justifyContent="center"
     flexDir="column"
     gap={2}
+    color="white"
   >
     <Nokogiri />
     <Text>Web Developer 👨🏻‍💻</Text>
