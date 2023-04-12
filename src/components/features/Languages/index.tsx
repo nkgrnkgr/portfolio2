@@ -17,7 +17,7 @@ export const Languages: React.FC = () => {
 
   return (
     <Skeleton isLoaded={!isLoading}>
-      <Heading as="h2" size="xl" textAlign="center">
+      <Heading as="h2" size="xl" mb={2} textAlign="center">
         Languages 🛠️
       </Heading>
       <LanguagesChart chartDataList={convertResponseToChartDataList(data)} />
