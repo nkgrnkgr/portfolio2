@@ -1,7 +1,7 @@
-import { Text } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 
 export const Nokogiri: React.FC = () => (
-  <Text fontWeight="extrabold" fontFamily="Helvetica">
+  <Heading as="h1" fontFamily="Helvetica">
     Nokogiri
-  </Text>
+  </Heading>
 );

@@ -10,7 +10,7 @@ export const Home: React.FC = () => {
     <Container mt={6}>
       <Flex gap={4} flexWrap="wrap" justifyContent="center">
         <Box flex={1}>
-          <ContentWrapper bgColor="black">
+          <ContentWrapper background="black">
             <WelcomeMessage />
           </ContentWrapper>
         </Box>
@@ -21,7 +21,7 @@ export const Home: React.FC = () => {
         </Box>
       </Flex>
       <Box mt={4}>
-        <ContentWrapper bgColor="white">
+        <ContentWrapper background="white">
           <GithubGrassGraph />
         </ContentWrapper>
       </Box>

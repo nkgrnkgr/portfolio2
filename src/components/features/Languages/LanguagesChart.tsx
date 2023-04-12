@@ -47,9 +47,9 @@ const createChartData = (list: ChartDataType[]) => {
 const KEY_COLOR_MAP: Record<string, string> = {
   TypeScript: "#2f74c0",
   JavaScript: "#F7DF1E",
-  CSS: "#0091D5",
-  Java: "#E61F24",
-  Kotlin: "#7B71E4",
+  CSS: "#563d7c",
+  Java: "#b07219",
+  Kotlin: "#A97BFF",
 };
 
 export const convertResponseToChartDataList = (

@@ -1,6 +1,6 @@
 import { fetcher } from "@/functions/fetcher";
 import { GithubLanguagesResponse } from "@/types/GithubLanguages";
-import { Box, Skeleton } from "@chakra-ui/react";
+import { Box, Heading, Skeleton } from "@chakra-ui/react";
 import useSWR from "swr";
 import {
   LanguagesChart,
@@ -17,6 +17,9 @@ export const Languages: React.FC = () => {
 
   return (
     <Skeleton isLoaded={!isLoading}>
+      <Heading as="h2" size="xl" textAlign="center">
+        Languages 🛠️
+      </Heading>
       <LanguagesChart chartDataList={convertResponseToChartDataList(data)} />
     </Skeleton>
   );
