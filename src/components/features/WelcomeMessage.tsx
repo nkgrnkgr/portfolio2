@@ -22,13 +22,13 @@ export const WelcomeMessage: React.FC = () => (
         <Icon as={FaGithub} />
       </ExternalLink>
       <ExternalLink href={"https://twitter.com/nkgrnkgr"}>
-        <Icon as={FaTwitter} />
+        <Icon color="#1D9BF0" as={FaTwitter} />
       </ExternalLink>
       <ExternalLink href={"https://speakerdeck.com/undefined_name"}>
-        <Icon as={FaSpeakerDeck} />
+        <Icon color="#009287" as={FaSpeakerDeck} />
       </ExternalLink>
       <ExternalLink href={"https://zenn.dev/nokogiri"}>
-        <Icon as={SiZenn} />
+        <Icon color="#3EA8FF" as={SiZenn} />
       </ExternalLink>
     </HStack>
   </Flex>
