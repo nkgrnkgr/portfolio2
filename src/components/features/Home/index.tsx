@@ -3,6 +3,7 @@ import { Box, Container, Flex } from "@chakra-ui/react";
 import { GithubGrassGraph } from "../GithubGrassGraph";
 import { Languages } from "../Languages";
 import { WelcomeMessage } from "../WelcomeMessage";
+import { UserTimeline } from "../Timeline";
 
 export const Home: React.FC = () => {
   return (
@@ -24,6 +25,34 @@ export const Home: React.FC = () => {
           <GithubGrassGraph />
         </ContentWrapper>
       </Box>
+      <Box mt={2}>
+        <ContentWrapper>
+          <UserTimeline timelineItems={data} />
+        </ContentWrapper>
+      </Box>
     </Container>
   );
 };
+
+const data = [
+  {
+    date: "2023-01-01",
+    title: "ほげ",
+    content: "AAA",
+  },
+  {
+    date: "2023-01-02",
+    title: "Fuga",
+    content: "BBB",
+  },
+  {
+    date: "2022-01-01",
+    title: "Piyo",
+    content: "CCC",
+  },
+  {
+    date: "2021-02-01",
+    title: "Rai",
+    content: "Lue",
+  },
+];
