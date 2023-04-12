@@ -13,11 +13,28 @@ import Image from "next/image";
 
 export const Header: React.FC = () => {
   return (
-    <Flex p="4" alignContent="center" justifyContent="space-between">
-      <LogoAndName />
-      <PageLinks />
-      <GithubLogo />
-    </Flex>
+    <>
+      <Flex
+        position="fixed"
+        w="100%"
+        h="72px"
+        p="4"
+        alignContent="center"
+        justifyContent="space-between"
+        sx={{
+          backgroundColor: "#fff",
+        }}
+      >
+        <LogoAndName />
+        <PageLinks />
+        <GithubLogo />
+      </Flex>
+      <Box
+        sx={{
+          height: "72px",
+        }}
+      ></Box>
+    </>
   );
 };
 
