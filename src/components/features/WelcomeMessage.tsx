@@ -1,4 +1,4 @@
-import { Flex, HStack, Icon, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Icon, Img, Text } from "@chakra-ui/react";
 import { FaGithub, FaSpeakerDeck, FaTwitter } from "react-icons/fa";
 import { SiZenn } from "react-icons/si";
 import { ExternalLink } from "../shared/ExternalLink";
@@ -13,8 +13,13 @@ export const WelcomeMessage: React.FC = () => (
     gap={2}
     color="white"
   >
-    <Nokogiri />
-    <Text>Web Developer 👨🏻‍💻</Text>
+    <Flex alignItems="center" justifyContent="center">
+      <Img mr={1} src="/logo-w.svg" h="2.25rem" w="2.25rem" />
+      <Box mr="2.25rem">
+        <Nokogiri />
+      </Box>
+    </Flex>
+    <Text>Web Developer</Text>
     <Text align="center" paddingRight="5" paddingLeft="5">
       TypeScript / React / Kotlin / Java
     </Text>
