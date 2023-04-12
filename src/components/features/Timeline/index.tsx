@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
 type Timeline = {
   date: string;
@@ -26,7 +26,9 @@ export const UserTimeline: React.FC<Props> = ({ timelineItems }) => {
     <Box>
       {Object.entries(content).map(([key, value]) => (
         <Flex key={key}>
-          <Box pr="4">{key}</Box>
+          <Text fontWeight="extrabold" fontFamily="Helvetica" pr="4">
+            {key}
+          </Text>
           <Flex direction="column">
             {value.map((item) => (
               <Flex
