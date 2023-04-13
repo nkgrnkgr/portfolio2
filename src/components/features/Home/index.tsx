@@ -1,6 +1,6 @@
 import { ContentWrapper } from "@/components/shared/ContentWrapper";
 import { GithubLanguagesResponse } from "@/types/GithubLanguages";
-import { TimelineRawData } from "@/types/Timeline";
+import { TimelineContent } from "@/types/Timeline";
 import { Box, Container, Flex } from "@chakra-ui/react";
 import { GithubGrassGraph } from "../GithubGrassGraph";
 import { Languages } from "../Languages";
@@ -9,10 +9,13 @@ import { WelcomeMessage } from "../WelcomeMessage";
 
 type Props = {
   githubLanguages: GithubLanguagesResponse;
-  timelines: TimelineRawData[];
+  timelineContents: TimelineContent[];
 };
 
-export const Home: React.FC<Props> = ({ githubLanguages, timelines }) => {
+export const Home: React.FC<Props> = ({
+  githubLanguages,
+  timelineContents,
+}) => {
   return (
     <Container maxWidth="900px" mt={6}>
       <Flex flexWrap="wrap" gap={4}>
@@ -34,7 +37,7 @@ export const Home: React.FC<Props> = ({ githubLanguages, timelines }) => {
       </Box>
       <Box mt={4}>
         <ContentWrapper>
-          <UserTimeline timelineItems={timelines} />
+          <UserTimeline timelineContents={timelineContents} />
         </ContentWrapper>
       </Box>
     </Container>

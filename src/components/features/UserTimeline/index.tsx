@@ -1,18 +1,18 @@
-import { TimelineRawData } from "@/types/Timeline";
+import { TimelineContent } from "@/types/Timeline";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { TimelineCard } from "./TimelineCard";
 
-type Content = Record<number, TimelineRawData[]>;
+type Content = Record<number, TimelineContent[]>;
 
 type Props = {
-  timelineItems: TimelineRawData[];
+  timelineContents: TimelineContent[];
 };
 
-export const UserTimeline: React.FC<Props> = ({ timelineItems }) => {
-  const content = convertToContent(timelineItems);
+export const UserTimeline: React.FC<Props> = ({ timelineContents }) => {
+  const converted = convert(timelineContents);
   return (
     <Box>
-      {Object.entries(content)
+      {Object.entries(converted)
         .sort((a, b) => Number(b[0]) - Number(a[0]))
         .map(([key, value]) => (
           <Flex key={key}>
@@ -55,7 +55,7 @@ export const UserTimeline: React.FC<Props> = ({ timelineItems }) => {
                   ></Box>
                   <Box>{item.title}</Box>
                   <Box>
-                    <TimelineCard rowData={item} />
+                    <TimelineCard content={item} />
                   </Box>
                 </Flex>
               ))}
@@ -66,7 +66,7 @@ export const UserTimeline: React.FC<Props> = ({ timelineItems }) => {
   );
 };
 
-const convertToContent = (timelineItems: Timeline[]) =>
+const convert = (timelineItems: TimelineContent[]) =>
   timelineItems.reduce<Content>((accumulator, currentValue) => {
     const year = currentValue.date.split("-")[0];
     const list = accumulator[Number(year)];

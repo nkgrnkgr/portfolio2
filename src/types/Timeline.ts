@@ -1,11 +1,4 @@
-export type Timeline = {
-  date: string;
-  title: string;
-  category: TimelineCategory;
-  content: React.ReactNode;
-};
-
-export type TimelineRawData = {
+export type TimelineContent = {
   date: string;
   category: TimelineCategory;
   title: string;

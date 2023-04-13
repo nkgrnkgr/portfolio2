@@ -1,17 +1,17 @@
-import { TimelineRawData } from "@/types/Timeline";
+import { TimelineContent } from "@/types/Timeline";
 import { Card, CardBody, Image, Stack, Text } from "@chakra-ui/react";
 
 type Props = {
-  rowData: TimelineRawData;
+  content: TimelineContent;
 };
 
-export const TimelineCard: React.FC<Props> = ({ rowData }) => {
+export const TimelineCard: React.FC<Props> = ({ content }) => {
   return (
     <Card maxW="sm">
       <CardBody>
-        <Image src={rowData.imageUrl} alt={rowData.title} borderRadius="lg" />
+        <Image src={content.imageUrl} alt={content.title} borderRadius="lg" />
         <Stack mt="6" spacing="3">
-          <Text fontFamily="Helvetica">{rowData.date}</Text>{" "}
+          <Text fontFamily="Helvetica">{content.date}</Text>{" "}
         </Stack>
       </CardBody>
     </Card>

@@ -1,6 +1,6 @@
-import { TIMELINE_CATEGORY, TimelineRawData } from "@/types/Timeline";
+import { TIMELINE_CATEGORY, TimelineContent } from "@/types/Timeline";
 
-const TIMELINE_RAW_DATA_LIST: TimelineRawData[] = [
+const TIMELINE_CONTENTS: TimelineContent[] = [
   {
     date: "2022-12-16",
     title: "ポケモンSVのダメージ計算アプリを支える技術",
@@ -11,6 +11,6 @@ const TIMELINE_RAW_DATA_LIST: TimelineRawData[] = [
   },
 ];
 
-export const fetchTimelineRawDataList = async () => {
-  return TIMELINE_RAW_DATA_LIST;
+export const fetchTimelineContents = async () => {
+  return TIMELINE_CONTENTS;
 };
