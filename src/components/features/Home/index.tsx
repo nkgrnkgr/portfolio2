@@ -4,19 +4,24 @@ import { GithubGrassGraph } from "../GithubGrassGraph";
 import { Languages } from "../Languages";
 import { UserTimeline } from "../Timeline";
 import { WelcomeMessage } from "../WelcomeMessage";
+import { GithubLanguagesResponse } from "@/types/GithubLanguages";
 
-export const Home: React.FC = () => {
+type Props = {
+  githubLanguages: GithubLanguagesResponse;
+};
+
+export const Home: React.FC<Props> = ({ githubLanguages }) => {
   return (
-    <Container mt={6}>
-      <Flex gap={4} flexWrap="wrap" justifyContent="center">
-        <Box flex={1}>
+    <Container maxWidth="900px" mt={6}>
+      <Flex flexWrap="wrap" gap={4}>
+        <Box height="425px" width="425px">
           <ContentWrapper background="black">
             <WelcomeMessage />
           </ContentWrapper>
         </Box>
-        <Box flex={1}>
+        <Box height="425px" width="425px">
           <ContentWrapper>
-            <Languages />
+            <Languages githubLanguages={githubLanguages} />
           </ContentWrapper>
         </Box>
       </Flex>

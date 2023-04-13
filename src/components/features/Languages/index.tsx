@@ -1,26 +1,23 @@
-import { fetcher } from "@/functions/fetcher";
 import { GithubLanguagesResponse } from "@/types/GithubLanguages";
-import { Box, Heading, Skeleton } from "@chakra-ui/react";
-import useSWR from "swr";
+import { Box, Heading } from "@chakra-ui/react";
 import {
   LanguagesChart,
   convertResponseToChartDataList,
 } from "./LanguagesChart";
 
-export const Languages: React.FC = () => {
-  const { data, isLoading, error } = useSWR<GithubLanguagesResponse>(
-    "/api/github-languages",
-    fetcher.get
-  );
+type Props = {
+  githubLanguages: GithubLanguagesResponse;
+};
 
-  if (error) return <Box>Error</Box>;
-
+export const Languages: React.FC<Props> = ({ githubLanguages }) => {
   return (
-    <Skeleton isLoaded={!isLoading}>
+    <Box>
       <Heading as="h2" size="xl" mb={2} textAlign="center">
         Languages 🛠️
       </Heading>
-      <LanguagesChart chartDataList={convertResponseToChartDataList(data)} />
-    </Skeleton>
+      <LanguagesChart
+        chartDataList={convertResponseToChartDataList(githubLanguages)}
+      />
+    </Box>
   );
 };

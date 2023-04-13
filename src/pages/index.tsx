@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import { Home as Page, Props } from "../components/pages/Home";
+import { IndexPage as Page, Props } from "../components/pages/IndexPage";
 import { fetchGithubLanguages } from "@/functions/repository/fetchGithubLanguages";
 
 export default Page;
