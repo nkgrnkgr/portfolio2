@@ -1,10 +1,5 @@
+import { Timeline } from "@/types/Timeline";
 import { Box, Flex, Text } from "@chakra-ui/react";
-
-type Timeline = {
-  date: string;
-  title: string;
-  content: React.ReactNode;
-};
 
 type Content = Record<number, Timeline[]>;
 

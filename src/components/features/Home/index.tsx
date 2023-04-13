@@ -2,15 +2,17 @@ import { ContentWrapper } from "@/components/shared/ContentWrapper";
 import { Box, Container, Flex } from "@chakra-ui/react";
 import { GithubGrassGraph } from "../GithubGrassGraph";
 import { Languages } from "../Languages";
-import { UserTimeline } from "../Timeline";
+import { UserTimeline } from "../UserTimeline";
 import { WelcomeMessage } from "../WelcomeMessage";
 import { GithubLanguagesResponse } from "@/types/GithubLanguages";
+import { Timeline } from "@/types/Timeline";
 
 type Props = {
   githubLanguages: GithubLanguagesResponse;
+  timelines: Timeline[];
 };
 
-export const Home: React.FC<Props> = ({ githubLanguages }) => {
+export const Home: React.FC<Props> = ({ githubLanguages, timelines }) => {
   return (
     <Container maxWidth="900px" mt={6}>
       <Flex flexWrap="wrap" gap={4}>
@@ -32,32 +34,9 @@ export const Home: React.FC<Props> = ({ githubLanguages }) => {
       </Box>
       <Box mt={4}>
         <ContentWrapper>
-          <UserTimeline timelineItems={data} />
+          <UserTimeline timelineItems={timelines} />
         </ContentWrapper>
       </Box>
     </Container>
   );
 };
-
-const data = [
-  {
-    date: "2023-01-01",
-    title: "ほげ",
-    content: "AAA",
-  },
-  {
-    date: "2023-01-02",
-    title: "Fuga",
-    content: "BBB",
-  },
-  {
-    date: "2022-01-01",
-    title: "Piyo",
-    content: "CCC",
-  },
-  {
-    date: "2021-02-01",
-    title: "Rai",
-    content: "Lue",
-  },
-];
