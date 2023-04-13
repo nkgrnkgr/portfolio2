@@ -2,12 +2,12 @@ import { Timeline } from "@/types/Timeline";
 
 const TIMELINES: Timeline[] = [
   {
-    date: "2023-01-01",
+    date: "2023-01-03",
     title: "ほげ",
     content: "AAA",
   },
   {
-    date: "2023-01-02",
+    date: "2023-01-04",
     title: "Fuga",
     content: "BBB",
   },

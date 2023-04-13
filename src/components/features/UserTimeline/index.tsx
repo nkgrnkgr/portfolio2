@@ -68,5 +68,8 @@ const convertToContent = (timelineItems: Timeline[]) =>
     const year = currentValue.date.split("-")[0];
     const list = accumulator[Number(year)];
     accumulator[Number(year)] = list ? [...list, currentValue] : [currentValue];
+    accumulator[Number(year)].sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime() // 日付の降順にソート
+    );
     return accumulator;
   }, {});
