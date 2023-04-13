@@ -1,12 +1,12 @@
 import { GithubLanguagesResponse } from "@/types/GithubLanguages";
-import { Timeline } from "@/types/Timeline";
+import { TimelineRawData } from "@/types/Timeline";
 import { Layout } from "../Layout";
 import { Header } from "../features/Header";
 import { Home } from "../features/Home";
 
 export type Props = {
   githubLanguages: GithubLanguagesResponse;
-  timelines: Timeline[];
+  timelines: TimelineRawData[];
 };
 
 export const IndexPage: React.FC<Props> = ({ githubLanguages, timelines }) => (

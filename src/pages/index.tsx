@@ -1,17 +1,18 @@
+import { fetchGithubLanguages } from "@/functions/repository/fetchGithubLanguages";
+import { fetchTimelineRawDataList } from "@/functions/repository/fetchTimelines";
 import { GetStaticProps } from "next";
 import { IndexPage as Page, Props } from "../components/pages/IndexPage";
-import { fetchGithubLanguages } from "@/functions/repository/fetchGithubLanguages";
-import { fetchTimelines } from "@/functions/repository/fetchTimelines";
 
 export default Page;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const githubLanguages = await fetchGithubLanguages();
-  const timelines = await fetchTimelines();
+  const row = await fetchTimelineRawDataList();
+
   return {
     props: {
       githubLanguages,
-      timelines,
+      timelines: row,
     },
   };
 };

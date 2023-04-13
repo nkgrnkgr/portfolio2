@@ -1,10 +1,11 @@
-import { Timeline } from "@/types/Timeline";
+import { TimelineRawData } from "@/types/Timeline";
 import { Box, Flex, Text } from "@chakra-ui/react";
+import { TimelineCard } from "./TimelineCard";
 
-type Content = Record<number, Timeline[]>;
+type Content = Record<number, TimelineRawData[]>;
 
 type Props = {
-  timelineItems: Timeline[];
+  timelineItems: TimelineRawData[];
 };
 
 export const UserTimeline: React.FC<Props> = ({ timelineItems }) => {
@@ -53,7 +54,9 @@ export const UserTimeline: React.FC<Props> = ({ timelineItems }) => {
                     }}
                   ></Box>
                   <Box>{item.title}</Box>
-                  <Box>{item.content}</Box>
+                  <Box>
+                    <TimelineCard rowData={item} />
+                  </Box>
                 </Flex>
               ))}
             </Flex>

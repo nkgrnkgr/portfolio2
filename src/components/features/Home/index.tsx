@@ -1,15 +1,15 @@
 import { ContentWrapper } from "@/components/shared/ContentWrapper";
+import { GithubLanguagesResponse } from "@/types/GithubLanguages";
+import { TimelineRawData } from "@/types/Timeline";
 import { Box, Container, Flex } from "@chakra-ui/react";
 import { GithubGrassGraph } from "../GithubGrassGraph";
 import { Languages } from "../Languages";
 import { UserTimeline } from "../UserTimeline";
 import { WelcomeMessage } from "../WelcomeMessage";
-import { GithubLanguagesResponse } from "@/types/GithubLanguages";
-import { Timeline } from "@/types/Timeline";
 
 type Props = {
   githubLanguages: GithubLanguagesResponse;
-  timelines: Timeline[];
+  timelines: TimelineRawData[];
 };
 
 export const Home: React.FC<Props> = ({ githubLanguages, timelines }) => {
