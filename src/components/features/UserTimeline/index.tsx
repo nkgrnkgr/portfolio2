@@ -1,4 +1,4 @@
-import { TimelineContent } from "@/types/Timeline";
+import { CATEGORY_NAME, TimelineContent } from "@/types/Timeline";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { TimelineCard } from "./TimelineCard";
 
@@ -34,7 +34,7 @@ export const UserTimeline: React.FC<Props> = ({ timelineContents }) => {
                       top: "10px",
                       bottom: "0",
                       width: "2px",
-                      background: "#000",
+                      backgroundColor: "#E2E8F0",
                     },
                   }}
                 >
@@ -50,10 +50,10 @@ export const UserTimeline: React.FC<Props> = ({ timelineContents }) => {
                       borderRadius: "50%",
                       top: "5px",
                       left: "-9px",
-                      backgroundColor: "#000",
+                      backgroundColor: "#E2E8F0",
                     }}
                   ></Box>
-                  <Box>{item.title}</Box>
+                  <Box mb={2}>{CATEGORY_NAME[item.category]}</Box>
                   <Box>
                     <TimelineCard content={item} />
                   </Box>
