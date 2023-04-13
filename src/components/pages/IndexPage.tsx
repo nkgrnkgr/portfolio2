@@ -16,7 +16,10 @@ export const IndexPage: React.FC<Props> = ({
   <Layout
     header={<Header />}
     main={
-      <Home githubLanguages={githubLanguages} timelines={timelineContents} />
+      <Home
+        githubLanguages={githubLanguages}
+        timelineContents={timelineContents}
+      />
     }
   />
 );
