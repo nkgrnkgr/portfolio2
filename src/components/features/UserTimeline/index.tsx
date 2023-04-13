@@ -34,7 +34,7 @@ export const UserTimeline: React.FC<Props> = ({ timelineContents }) => {
                       top: "10px",
                       bottom: "0",
                       width: "2px",
-                      backgroundColor: "#E2E8F0",
+                      backgroundColor: "#CBD5E0",
                     },
                   }}
                 >
@@ -50,11 +50,16 @@ export const UserTimeline: React.FC<Props> = ({ timelineContents }) => {
                       borderRadius: "50%",
                       top: "5px",
                       left: "-9px",
-                      backgroundColor: "#E2E8F0",
+                      backgroundColor: "#CBD5E0",
                     }}
                   ></Box>
-                  <Box mb={2}>{CATEGORY_NAME[item.category]}</Box>
-                  <Box>
+                  <Flex mb={2}>
+                    {CATEGORY_NAME[item.category]}
+                    <Text ml={2} color="gray.500">
+                      {createDateText(item.date)}
+                    </Text>
+                  </Flex>
+                  <Box mb={10}>
                     <TimelineCard content={item} />
                   </Box>
                 </Flex>
@@ -76,3 +81,8 @@ const convert = (timelineItems: TimelineContent[]) =>
     );
     return accumulator;
   }, {});
+
+const createDateText = (dateString: string) => {
+  const date = new Date(dateString);
+  return `${date.getMonth() + 1}/${date.getDate()}`;
+};

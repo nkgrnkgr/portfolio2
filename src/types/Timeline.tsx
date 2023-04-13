@@ -29,7 +29,7 @@ export const CATEGORY_ICON: Record<TimelineCategory, React.ReactNode> = {
 } as const;
 
 export const CATEGORY_NAME: Record<TimelineCategory, React.ReactNode> = {
-  [TIMELINE_CATEGORY.RELEASE]: <Text>🎉Published🎉</Text>,
+  [TIMELINE_CATEGORY.RELEASE]: <Text color="gray.500">🎉Published🎉</Text>,
   [TIMELINE_CATEGORY.ZENN]: (
     <Text color="gray.500">Published a post on zenn.dev</Text>
   ),
