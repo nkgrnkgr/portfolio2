@@ -20,6 +20,14 @@ const TIMELINE_CONTENTS: TimelineContent[] = [
     description: "",
   },
   {
+    date: "2021-11-06",
+    title: "人事評価SaaS fair リリース",
+    imageUrl: "https://fair.ne.jp/wp-content/uploads/2021/10/kv-img.jpeg",
+    linkUrl: "https://fair.ne.jp/",
+    category: TIMELINE_CATEGORY.RELEASE,
+    description: "",
+  },
+  {
     date: "2020-02-04",
     title: "",
     imageUrl:
