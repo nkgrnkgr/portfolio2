@@ -48,6 +48,56 @@ const TIMELINE_CONTENTS: TimelineContent[] = [
     category: TIMELINE_CATEGORY.SPEAKER_DECK,
     description: "",
   },
+  {
+    date: "2019-10-25",
+    title: "",
+    imageUrl:
+      "https://files.speakerdeck.com/presentations/2f7e34d2a13e4a3f8bac5035d5408c76/slide_0.jpg?13977892",
+    linkUrl:
+      "https://speakerdeck.com/undefined_name/trying-state-manegemant-without-redux-updated",
+    category: TIMELINE_CATEGORY.SPEAKER_DECK,
+    description: "",
+  },
+  {
+    date: "2019-06-26",
+    title: "",
+    imageUrl:
+      "https://files.speakerdeck.com/presentations/4b1adbca51a047bab5ee8526eaa5b7d7/slide_0.jpg?12891576",
+    linkUrl:
+      "https://speakerdeck.com/undefined_name/5fen-teshao-jie-suruensiniafalsezhi-de-sheng-chan-shu",
+    category: TIMELINE_CATEGORY.SPEAKER_DECK,
+    description: "",
+  },
+  {
+    date: "2019-05-23",
+    title: "",
+    imageUrl:
+      "https://files.speakerdeck.com/presentations/60d9444ece784968a74e7ab860d39f17/slide_0.jpg?12162395",
+    linkUrl:
+      "https://speakerdeck.com/undefined_name/does-react-redux-firebase-spark-joy-6bb3b8fc-1e75-4c00-a9b8-78ad08546cf1",
+    category: TIMELINE_CATEGORY.SPEAKER_DECK,
+    description: "",
+  },
+  {
+    date: "2019-01-16",
+    title: "",
+    imageUrl:
+      "https://files.speakerdeck.com/presentations/f9167c7fe58140c8a87da9b5f170fdee/slide_0.jpg?11554946",
+    linkUrl:
+      "https://speakerdeck.com/undefined_name/kotlin-plus-springboottesahisuwozuo-tutekotlinwohao-kininatutafalsetesofalseliang-sawoshao-jie-suru",
+    category: TIMELINE_CATEGORY.SPEAKER_DECK,
+    description: "",
+  },
+  {
+    date: "2018-11-25",
+    title: "",
+    imageUrl:
+      "https://files.speakerdeck.com/presentations/15d44a279b81497ca728f37921d59725/slide_0.jpg?11304601",
+    linkUrl:
+      "https://speakerdeck.com/undefined_name/xiao-sakuhasimerusukuramukai-fa",
+    category: TIMELINE_CATEGORY.SPEAKER_DECK,
+    description: "",
+  },
 ];
 
 export const fetchTimelineContents = async () => {
