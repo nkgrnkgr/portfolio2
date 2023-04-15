@@ -19,6 +19,35 @@ const TIMELINE_CONTENTS: TimelineContent[] = [
     category: TIMELINE_CATEGORY.RELEASE,
     description: "",
   },
+  {
+    date: "2020-02-04",
+    title: "",
+    imageUrl:
+      "https://files.speakerdeck.com/presentations/b3527a4ee0b54f5d9f1b5566957acf6f/slide_0.jpg?14804822",
+    linkUrl:
+      "https://speakerdeck.com/undefined_name/mopupuro-at-kintonekai-fa-timu",
+    category: TIMELINE_CATEGORY.SPEAKER_DECK,
+    description: "",
+  },
+  {
+    date: "2020-01-27",
+    title: "",
+    imageUrl:
+      "https://files.speakerdeck.com/presentations/8cba982466a54d58b967148030a9b59d/slide_0.jpg?14729734",
+    linkUrl:
+      "https://speakerdeck.com/undefined_name/mian-qiang-hui-dedeng-tan-zhe-ni-zhi-wen-siduraike-ti-wojie-jue-suru-sabisuworirisusimasita",
+    category: TIMELINE_CATEGORY.SPEAKER_DECK,
+    description: "",
+  },
+  {
+    date: "2020-01-22",
+    title: "",
+    imageUrl:
+      "https://files.speakerdeck.com/presentations/c4de7fe7872b496f8fdf58f6e5d31474/slide_0.jpg?14703199",
+    linkUrl: "https://speakerdeck.com/undefined_name/usefull-gitlens",
+    category: TIMELINE_CATEGORY.SPEAKER_DECK,
+    description: "",
+  },
 ];
 
 export const fetchTimelineContents = async () => {

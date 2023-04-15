@@ -8,7 +8,7 @@ type Props = {
 
 export const TimelineCard: React.FC<Props> = ({ content }) => {
   return (
-    <Card maxW="sm">
+    <Card maxW="sm" variant="filled">
       <CardBody>
         <ExternalLink href={content.linkUrl}>
           <Image src={content.imageUrl} alt={content.title} borderRadius="lg" />
@@ -27,5 +27,5 @@ export const TimelineCard: React.FC<Props> = ({ content }) => {
 
 const createDateText = (dateString: string) => {
   const date = new Date(dateString);
-  return `${date.getMonth() + 1}/${date.getDate()}`;
+  return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
 };

@@ -1,5 +1,5 @@
 import { CATEGORY_NAME, TimelineContent } from "@/types/Timeline";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { TimelineCard } from "./TimelineCard";
 
 type Content = Record<number, TimelineContent[]>;
@@ -12,6 +12,9 @@ export const UserTimeline: React.FC<Props> = ({ timelineContents }) => {
   const converted = convert(timelineContents);
   return (
     <Box>
+      <Heading as="h2" mb={4}>
+        Timeline 📆
+      </Heading>
       {Object.entries(converted)
         .sort((a, b) => Number(b[0]) - Number(a[0]))
         .map(([key, value]) => (
