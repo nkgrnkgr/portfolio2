@@ -11,7 +11,7 @@ type Props = {
 
 export const Languages: React.FC<Props> = ({ githubLanguages }) => {
   return (
-    <Box>
+    <Box color="white" p={4}>
       <Heading as="h2" size="xl" mb={2} textAlign="center">
         Languages 🛠️
       </Heading>

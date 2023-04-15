@@ -11,10 +11,10 @@ export const WelcomeMessage: React.FC = () => (
     justifyContent="center"
     flexDir="column"
     gap={2}
-    color="white"
+    color="black"
   >
     <Flex alignItems="center" justifyContent="center">
-      <Img mr={1} src="/logo-w.svg" h="2.25rem" w="2.25rem" />
+      <Img mr={1} src="/logo-b.svg" h="2.25rem" w="2.25rem" />
       <Box mr="2.25rem">
         <Nokogiri />
       </Box>

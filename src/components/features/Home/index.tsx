@@ -19,7 +19,7 @@ export const Home: React.FC<Props> = ({
   return (
     <Container maxWidth="900px" mt={6}>
       <Box height="400px" mt={4}>
-        <ContentWrapper background="black">
+        <ContentWrapper background="#D5FF40">
           <WelcomeMessage />
         </ContentWrapper>
       </Box>

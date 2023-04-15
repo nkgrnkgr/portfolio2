@@ -24,9 +24,7 @@ export const Header: React.FC = () => {
         p="4"
         alignContent="center"
         justifyContent="space-between"
-        bgColor="white"
-        borderBottom="1px solid"
-        borderBottomColor="gray.300"
+        bgColor="#D5FF40"
         zIndex={1}
       >
         <LogoAndName />
@@ -68,7 +66,7 @@ const PageLinks: React.FC = () => (
       <TabList>
         <Tab
           _selected={{
-            color: "white",
+            color: "#D5FF40",
             bg: "black",
             borderRadius: "10px",
           }}
@@ -78,7 +76,7 @@ const PageLinks: React.FC = () => (
         </Tab>
         <Tab
           _selected={{
-            color: "white",
+            color: "#D5FF40",
             bg: "black",
             borderRadius: "10px",
           }}

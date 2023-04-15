@@ -11,7 +11,7 @@ type Props = {
 export const UserTimeline: React.FC<Props> = ({ timelineContents }) => {
   const converted = convert(timelineContents);
   return (
-    <Box>
+    <Box color="white" p={4}>
       <Heading as="h2" mb={4}>
         Timeline 📆
       </Heading>
@@ -37,7 +37,7 @@ export const UserTimeline: React.FC<Props> = ({ timelineContents }) => {
                       top: "10px",
                       bottom: "0",
                       width: "2px",
-                      backgroundColor: "#CBD5E0",
+                      backgroundColor: "#fff",
                     },
                   }}
                 >
@@ -47,18 +47,18 @@ export const UserTimeline: React.FC<Props> = ({ timelineContents }) => {
                       display: "flex",
                       alignItem: "center",
                       justifyContent: "center",
-                      border: "4px solid #fff",
+                      border: "4px solid #000",
                       width: "16px",
                       height: "16px",
                       borderRadius: "50%",
                       top: "5px",
                       left: "-9px",
-                      backgroundColor: "#CBD5E0",
+                      backgroundColor: "#fff",
                     }}
                   ></Box>
                   <Flex mb={2}>
                     {CATEGORY_NAME[item.category]}
-                    <Text ml={2} color="gray.500">
+                    <Text ml={2} color="gray.200">
                       {createDateText(item.date)}
                     </Text>
                   </Flex>
