@@ -27,6 +27,7 @@ export const Header: React.FC = () => {
         bgColor="white"
         borderBottom="1px solid"
         borderBottomColor="gray.300"
+        zIndex={1}
       >
         <LogoAndName />
         <PageLinks />
