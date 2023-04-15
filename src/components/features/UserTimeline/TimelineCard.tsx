@@ -8,7 +8,7 @@ type Props = {
 
 export const TimelineCard: React.FC<Props> = ({ content }) => {
   return (
-    <Card maxW="sm" variant="filled">
+    <Card maxW="sm" variant="filled" color="white" bgColor="gray.700">
       <CardBody>
         <ExternalLink href={content.linkUrl}>
           <Image src={content.imageUrl} alt={content.title} borderRadius="lg" />

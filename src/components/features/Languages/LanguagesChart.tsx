@@ -15,6 +15,9 @@ export const LanguagesChart: React.FC<{
 
     new Chart(CANVAS_ID, {
       type: "doughnut",
+      options: {
+        color: "#fff",
+      },
       data: createChartData(chartDataList),
     });
   }, [chartDataList]);

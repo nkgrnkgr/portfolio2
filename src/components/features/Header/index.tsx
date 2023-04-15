@@ -11,6 +11,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import NextLink from "next/link";
+import { useRouter } from "next/router";
+import { useCallback } from "react";
+import { IconType } from "react-icons";
 import { FaHome } from "react-icons/fa";
 import { FiPackage } from "react-icons/fi";
 
@@ -24,9 +28,7 @@ export const Header: React.FC = () => {
         p="4"
         alignContent="center"
         justifyContent="space-between"
-        bgColor="white"
-        borderBottom="1px solid"
-        borderBottomColor="gray.300"
+        bgColor="#D5FF40"
         zIndex={1}
       >
         <LogoAndName />
@@ -62,34 +64,56 @@ const BoldText: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <Text fontWeight="extrabold">{children}</Text>
 );
 
-const PageLinks: React.FC = () => (
-  <Flex justifyContent="center" alignContent="center" flex="1">
-    <Tabs variant="unstyled">
-      <TabList>
-        <Tab
-          _selected={{
-            color: "white",
-            bg: "black",
-            borderRadius: "10px",
-          }}
-        >
-          <Icon mr={1} as={FaHome} />
-          <BoldText>Home</BoldText>
-        </Tab>
-        <Tab
-          _selected={{
-            color: "white",
-            bg: "black",
-            borderRadius: "10px",
-          }}
-        >
-          <Icon mr={1} as={FiPackage} />
-          <BoldText>Works</BoldText>
-        </Tab>
-      </TabList>
-    </Tabs>
-  </Flex>
-);
+const TABS: {
+  label: string;
+  icon: IconType;
+  path: string;
+}[] = [
+  {
+    label: "Home",
+    icon: FaHome,
+    path: "/",
+  },
+  {
+    label: "Works",
+    icon: FiPackage,
+    path: "/works",
+  },
+];
+
+const PageLinks: React.FC = () => {
+  const pathname = useRouter().pathname;
+
+  const getDefaultIndex = useCallback(() => {
+    return TABS.findIndex((tab) => tab.path === pathname);
+  }, [pathname]);
+
+  return (
+    <Flex justifyContent="center" alignContent="center" flex="1">
+      <Tabs variant="unstyled" defaultIndex={getDefaultIndex()}>
+        <TabList>
+          {TABS.map((tab) => (
+            <Tab
+              key={tab.path}
+              _selected={{
+                color: "#D5FF40",
+                bg: "black",
+                borderRadius: "10px",
+              }}
+            >
+              <NextLink href={tab.path}>
+                <Center>
+                  <Icon mr={1} as={tab.icon} />
+                  <BoldText>{tab.label}</BoldText>
+                </Center>
+              </NextLink>
+            </Tab>
+          ))}
+        </TabList>
+      </Tabs>
+    </Flex>
+  );
+};
 
 const GithubLogo: React.FC = () => (
   <Center flex="1" justifyContent="flex-end">
