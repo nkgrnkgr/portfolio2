@@ -1,5 +1,5 @@
 import { Box, VStack } from "@chakra-ui/react";
-import { Overlay } from "./features/OverLay";
+import { Overlay } from "./features/Overlay";
 
 type Props = {
   header: React.ReactNode;
