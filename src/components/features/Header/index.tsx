@@ -29,8 +29,7 @@ export const Header: React.FC = () => {
         p="4"
         alignContent="center"
         justifyContent="space-between"
-        bgColor="white"
-        zIndex={1}
+        zIndex={3}
       >
         <LogoAndName />
         <PageLinks />
