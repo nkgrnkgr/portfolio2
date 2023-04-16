@@ -26,16 +26,14 @@ export const Home: React.FC<Props> = ({
           <Img src="/icons.svg" alt="Github Grass Graph" />
         </Box>
       </SimpleGrid>
-      <Box mt={4}>
-        <ContentWrapper background="transparent">
+      <SimpleGrid minChildWidth="300px">
+        <Box p={10}>
           <Languages githubLanguages={githubLanguages} />
-        </ContentWrapper>
-      </Box>
-      <Box mt={4}>
-        <ContentWrapper background="white">
+        </Box>
+        <Box display="flex" alignItems="center">
           <GithubGrassGraph />
-        </ContentWrapper>
-      </Box>
+        </Box>
+      </SimpleGrid>
       <Box mt={4}>
         <ContentWrapper>
           <UserTimeline timelineContents={timelineContents} />
