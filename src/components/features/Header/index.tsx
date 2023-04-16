@@ -22,18 +22,26 @@ export const Header: React.FC = () => {
   return (
     <>
       <Flex
+        alignItems="center"
+        justifyContent="center"
+        backgroundColor="rgba(255, 255, 255, 0.5)"
+        backdropFilter="blur(3px)"
+        borderBottom="1px solid #fff"
         position="fixed"
         w="100%"
-        h="72px"
-        p="4"
-        alignContent="center"
-        justifyContent="space-between"
-        bgColor="#D5FF40"
-        zIndex={1}
+        minH="72px"
       >
-        <LogoAndName />
-        <PageLinks />
-        <GithubLogo />
+        <Flex
+          w="100%"
+          maxW="1200px"
+          p={4}
+          alignContent="center"
+          justifyContent="space-between"
+        >
+          <LogoAndName />
+          <PageLinks />
+          <GithubLogo />
+        </Flex>
       </Flex>
       <Box
         sx={{
@@ -45,7 +53,7 @@ export const Header: React.FC = () => {
 };
 
 const LogoAndName: React.FC = () => (
-  <Flex justifyContent="flex-start" alignContent="center" flex="1">
+  <Flex justifyContent="flex-start" alignItems="center" flex="1">
     <Image alt="logo" width={40} height={40} src="./logo-b.svg" />
     <Box
       display={{
@@ -53,9 +61,9 @@ const LogoAndName: React.FC = () => (
         sm: "block",
       }}
       ml={2}
-      fontSize="2xl"
+      fontSize="xl"
     >
-      <Nokogiri />
+      <Nokogiri fontSize="xl" />
     </Box>
   </Flex>
 );
@@ -96,7 +104,7 @@ const PageLinks: React.FC = () => {
             <Tab
               key={tab.path}
               _selected={{
-                color: "#D5FF40",
+                color: "white",
                 bg: "black",
                 borderRadius: "10px",
               }}
