@@ -20,27 +20,35 @@ import { FiPackage } from "react-icons/fi";
 
 export const Header: React.FC = () => {
   return (
-    <Flex alignItems="center" justifyContent="center">
+    <>
       <Flex
+        alignItems="center"
+        justifyContent="center"
+        backgroundColor="rgba(255, 255, 255, 0.5)"
+        backdropFilter="blur(3px)"
+        borderBottom="1px solid #fff"
         position="fixed"
         w="100%"
-        maxW="1200px"
-        h="72px"
-        p="4"
-        alignContent="center"
-        justifyContent="space-between"
-        zIndex={3}
+        minH="72px"
       >
-        <LogoAndName />
-        <PageLinks />
-        <GithubLogo />
+        <Flex
+          w="100%"
+          maxW="1200px"
+          p={4}
+          alignContent="center"
+          justifyContent="space-between"
+        >
+          <LogoAndName />
+          <PageLinks />
+          <GithubLogo />
+        </Flex>
       </Flex>
       <Box
         sx={{
           height: "72px",
         }}
       ></Box>
-    </Flex>
+    </>
   );
 };
 
