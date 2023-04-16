@@ -27,7 +27,7 @@ export const Home: React.FC<Props> = ({
         </Box>
       </SimpleGrid>
       <Box mt={4}>
-        <ContentWrapper>
+        <ContentWrapper background="transparent">
           <Languages githubLanguages={githubLanguages} />
         </ContentWrapper>
       </Box>
