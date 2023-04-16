@@ -1,7 +1,11 @@
 import { Heading } from "@chakra-ui/react";
 
-export const Nokogiri: React.FC = () => (
-  <Heading as="h1" fontFamily="Helvetica">
+type Props = {
+  fontSize: string;
+};
+
+export const Nokogiri: React.FC<Props> = ({ fontSize }) => (
+  <Heading as="h1" fontFamily="Helvetica" fontSize={fontSize}>
     Nokogiri
   </Heading>
 );

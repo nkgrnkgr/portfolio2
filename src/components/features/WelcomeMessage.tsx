@@ -16,7 +16,7 @@ export const WelcomeMessage: React.FC = () => (
     <Center>
       <Img mr={1} src="/logo-b.svg" h="2.25rem" w="2.25rem" />
       <Box mr="2.25rem">
-        <Nokogiri />
+        <Nokogiri fontSize="3xl" />
       </Box>
     </Center>
     <Text>Web Developer</Text>
