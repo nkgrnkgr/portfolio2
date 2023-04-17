@@ -1,0 +1,139 @@
+.offsetElement {
+  z-index: 4;
+  position: absolute;
+  width: 256px;
+  height: 144px;
+  background-image: url("/icons.svg");
+  offset-path: path(
+    "M 399 200.5 C 399 90.319183 309.680817 1 199.5 1 C 89.319191 1 0 90.319183 0 200.5 C 0 310.680817 89.319191 400 199.5 400 C 309.680817 400 399 310.680817 399 200.5 Z"
+  );
+  offset-rotate: auto 90deg;
+  animation: move 40s linear infinite;
+}
+
+@keyframes move {
+  to {
+    offset-distance: 100%;
+  }
+}
+
+.swing1 {
+  /*--  0.大車輪 and 1.観覧車全体 --*/
+  animation: swingEfect1 linear 30s 1;
+  transform-origin: 10px -200px;
+  display: block;
+}
+@keyframes swingEfect1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.swing2 {
+  /*-- 2.ゴンドラ --*/
+  animation: swingEfect2 linear 30s 1;
+  transform-origin: 20px 2px;
+  z-index: 4;
+  display: block;
+}
+@keyframes swingEfect2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  75% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes big-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes circle1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes circle2 {
+  0% {
+    transform: rotate(315deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes circle3 {
+  0% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+@keyframes circle4 {
+  0% {
+    transform: rotate(225deg);
+  }
+  100% {
+    transform: rotate(-135deg);
+  }
+}
+@keyframes circle5 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+@keyframes circle6 {
+  0% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(-225deg);
+  }
+}
+@keyframes circle7 {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(-270deg);
+  }
+}
+@keyframes circle8 {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-315deg);
+  }
+}

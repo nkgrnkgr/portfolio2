@@ -5,6 +5,7 @@ import { GithubGrassGraph } from "../GithubGrassGraph";
 import { Languages } from "../Languages";
 import { UserTimeline } from "../UserTimeline";
 import { WelcomeMessage } from "../WelcomeMessage";
+import { TopicIcons } from "../TopicIcons";
 
 type Props = {
   githubLanguages: GithubLanguagesResponse;
@@ -21,8 +22,8 @@ export const Home: React.FC<Props> = ({
         <Box minH="400px">
           <WelcomeMessage />
         </Box>
-        <Box minH="400px">
-          <Img src="/icons.svg" alt="Github Grass Graph" />
+        <Box minH="400px" display="flex" justifyContent="center">
+          <TopicIcons />
         </Box>
       </SimpleGrid>
       <SimpleGrid minChildWidth="300px" gap={4} mb={4}>
