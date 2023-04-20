@@ -1,6 +1,7 @@
 import { GithubLanguagesResponse } from "@/types/GithubLanguages";
 import { TimelineContent } from "@/types/Timeline";
 import { Layout } from "../Layout";
+import { Footer } from "../features/Footer";
 import { Header } from "../features/Header";
 import { Home } from "../features/Home";
 import { Meta } from "../features/Meta";
@@ -24,6 +25,7 @@ export const IndexPage: React.FC<Props> = ({
           timelineContents={timelineContents}
         />
       }
+      footer={<Footer />}
     />
   </>
 );

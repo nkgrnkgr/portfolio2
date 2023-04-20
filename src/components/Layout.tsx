@@ -4,9 +4,10 @@ import { Overlay } from "./features/Overlay";
 type Props = {
   header: React.ReactNode;
   main: React.ReactNode;
+  footer: React.ReactNode;
 };
 
-export const Layout: React.FC<Props> = ({ header, main }) => {
+export const Layout: React.FC<Props> = ({ header, main, footer }) => {
   return (
     <>
       <Box zIndex={1}>
@@ -20,6 +21,9 @@ export const Layout: React.FC<Props> = ({ header, main }) => {
           {main}
         </Box>
         <Box h="100px"></Box>
+        <Box w="100%" zIndex={3}>
+          {footer}
+        </Box>
       </VStack>
     </>
   );

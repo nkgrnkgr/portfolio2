@@ -1,10 +1,10 @@
 import { GithubLanguagesResponse } from "@/types/GithubLanguages";
 import { TimelineContent } from "@/types/Timeline";
 import { Box, Center, Container, Img, SimpleGrid } from "@chakra-ui/react";
-import { GithubGrassGraph } from "../GithubGrassGraph";
-import { Languages } from "../Languages";
-import { UserTimeline } from "../UserTimeline";
-import { WelcomeMessage } from "../WelcomeMessage";
+import { GithubGrassGraph } from "./GithubGrassGraph";
+import { Languages } from "./Languages";
+import { UserTimeline } from "./UserTimeline";
+import { WelcomeMessage } from "./WelcomeMessage";
 
 type Props = {
   githubLanguages: GithubLanguagesResponse;
