@@ -12,32 +12,26 @@ export const Meta: React.FC<Props> = ({ title, description }) => {
       <meta property="og:title" content={title}></meta>
       <meta name="description" content={description}></meta>
       <meta property="og:description" content={description}></meta>
-      <meta
-        name="thumbnail"
-        content="https://sv.pokesol.com/logo_pokesol_300.png"
-      ></meta>
+      <meta name="thumbnail" content="https://www.nkgr.dev/ogimage.png"></meta>
       <meta
         property="og:image"
-        content="https://sv.pokesol.com/logo_pokesol_300.png"
+        content="https://www.nkgr.dev/ogimage.png"
       ></meta>
-      <meta property="og:image:alt" content="ポケソルロゴ"></meta>
+      <meta property="og:image:alt" content="logo"></meta>
       <meta property="og:type" content="website"></meta>
-      <meta property="og:url" content="https://sv.pokesol.com/calc/"></meta>
+      <meta property="og:url" content="https://www.nkgr.dev"></meta>
       <meta name="twitter:card" content="summary"></meta>
-      <meta name="twitter:site" content="@pokesol_info"></meta>
+      <meta name="twitter:site" content="@nkgrnkgr"></meta>
 
-      <meta name="application-name" content="ダメージ計算ツールSV byポケソル" />
+      <meta name="application-name" content="nkgr.dev" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta
-        name="apple-mobile-web-app-title"
-        content="ダメージ計算ツールSV byポケソル"
-      />
+      <meta name="apple-mobile-web-app-title" content="nkgr.dev" />
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="msapplication-TileColor" content="#fff" />
       <meta name="msapplication-tap-highlight" content="no" />
-      <meta name="theme-color" content="#000000" />
+      <meta name="theme-color" content="#fff" />
 
       <link rel="apple-touch-icon" href="apple-touch-icon.png" />
       <link
