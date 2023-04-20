@@ -20,7 +20,7 @@ export const Meta: React.FC<Props> = ({ title, description }) => {
       <meta property="og:image:alt" content="logo"></meta>
       <meta property="og:type" content="website"></meta>
       <meta property="og:url" content="https://www.nkgr.dev"></meta>
-      <meta name="twitter:card" content="summary"></meta>
+      <meta name="twitter:card" content="summary_large_image"></meta>
       <meta name="twitter:site" content="@nkgrnkgr"></meta>
 
       <meta name="application-name" content="nkgr.dev" />
