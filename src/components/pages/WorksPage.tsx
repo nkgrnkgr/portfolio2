@@ -1,5 +1,6 @@
 import { Center, Heading } from "@chakra-ui/react";
 import { Layout } from "../Layout";
+import { Footer } from "../features/Footer";
 import { Header } from "../features/Header";
 import { Meta } from "../features/Meta";
 
@@ -14,6 +15,7 @@ export const WorksPage: React.FC = () => {
             <Heading>🚧 under construction 🚧</Heading>
           </Center>
         }
+        footer={<Footer />}
       />
     </>
   );

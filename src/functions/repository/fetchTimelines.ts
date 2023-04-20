@@ -2,6 +2,14 @@ import { TIMELINE_CATEGORY, TimelineContent } from "@/types/Timeline";
 
 const TIMELINE_CONTENTS: TimelineContent[] = [
   {
+    date: "2023-04-21",
+    title: "This site was Released🎉",
+    imageUrl: "https://www.nkgr.dev/ogimage.png",
+    linkUrl: "https://www.nkgr.dev",
+    category: TIMELINE_CATEGORY.RELEASE,
+    description: "nkgr.dev リリース",
+  },
+  {
     date: "2023-04-20",
     title: "",
     imageUrl:
